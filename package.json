@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "description": "Example of React.js usage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Mikhail Riabokon"
+}
