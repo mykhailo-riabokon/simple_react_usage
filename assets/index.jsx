@@ -1,4 +1,3 @@
-// ES5
 var App = React.createClass({
   displayName: 'App',
 
@@ -10,8 +9,6 @@ var App = React.createClass({
     );
   }
 });
-
-
 
 ReactDOM.render(
   <App />,
