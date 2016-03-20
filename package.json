@@ -5,5 +5,8 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Mikhail Riabokon"
+  "author": "Mikhail Riabokon",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }

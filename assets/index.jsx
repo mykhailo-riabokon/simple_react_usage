@@ -1,20 +1,17 @@
-// ES6
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div>This is my first React Component</div>
-//     );
-//   }
-// }
-
 // ES5
-const App = React.createClass({
+var App = React.createClass({
+  displayName: 'App',
+
   render: function () {
     return (
-      <div>This is my first React Component</div>
+      <div className="wrapper">
+        <div>This is my first React Component</div>
+      </div>
     );
   }
 });
+
+
 
 ReactDOM.render(
   <App />,
