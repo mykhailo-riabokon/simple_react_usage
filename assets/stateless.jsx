@@ -1,8 +1,8 @@
-function List({ listLength }) {
+function List(props) {
   function getListItems() {
     var result = [];
 
-    for (var i = 0; i < listLength; i++) {
+    for (var i = 0; i < props.listLength; i++) {
       result.push(
         <li key={i}>List item {i}</li>
       );
