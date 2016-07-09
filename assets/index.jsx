@@ -1,6 +1,7 @@
 var App = React.createClass({
   displayName: 'App',
 
+  // render is required method and should be defined in every React Component
   render: function () {
     return (
       <div className="wrapper">
