@@ -44,7 +44,7 @@ Should be aviliable by link [http://localhost:3000/tasks/tabs/](http://localhost
 
 Should be aviliable by link [http://localhost:3000/tasks/modal/](http://localhost:3000/tasks/modal/)
 
-### Loader
+### Loader React component
 ```react
 <Loader isShown={false} loadingText="Loading" />
 ```
