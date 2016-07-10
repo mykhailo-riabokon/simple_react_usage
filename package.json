@@ -8,5 +8,8 @@
   "author": "Mikhail Riabokon",
   "dependencies": {
     "express": "^4.13.4"
+  },
+  "engines": {
+    "node": "4.*.*"
   }
 }
