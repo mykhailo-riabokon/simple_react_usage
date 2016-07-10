@@ -1,4 +1,4 @@
-# Simple React usage challenge
+# Simple React usage tasks
 React is a library for building user interfaces, and every user interface consist of some reusable components.
 
 Let's imagine you already have some exisiting application, and your next story from sprint backlog is to create some new reusable components. 
