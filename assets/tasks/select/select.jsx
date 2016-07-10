@@ -47,9 +47,13 @@ class Select extends React.Component {
       <div ref="selectContainer" className="ui selection dropdown" onClick={this.onSelectClick}>
         <input type="hidden" name="gender" value={this.state.selectedValue} />
         <i className="dropdown icon"></i>
-        <div ref="selectedLabel" className="default text">{this.state.selectedLabel || this.props.placeholder}</div>
+        <div ref="selectedLabel" className="default text">
+          {this.state.selectedLabel || this.props.placeholder}
+        </div>
         <div className="menu transition hidden">
-          {this.props.options.map((option, index) => <Option key={index} {...option} onOptionClick={this.onOptionClick} /> )}
+          {this.props.options.map((option, index) => {
+            return <Option key={index} {...option} onOptionClick={this.onOptionClick} />
+          })}
         </div>
       </div>
     );
