@@ -2,7 +2,7 @@ class Modal extends React.Component {
   constructor(props) {
     super(props);
 
-    this.showModal = this.showModal().bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   showModal(){
@@ -20,6 +20,7 @@ class Modal extends React.Component {
   }
 
   render() {
+    // return (<div>{this.showModal()}</div>);
     return (<div>{this.showModal()}</div>);
   }
 }
