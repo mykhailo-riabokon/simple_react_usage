@@ -1,12 +1,9 @@
-class App extends React.Component {
-
-  render() {
-    return (
-      <Modal isShown={true}>
-        <h1>Some modal content</h1>
-      </Modal>
-    );
-  }
+function App() {
+  return (
+    <Modal isShown={true}>
+      <h1>Some modal content</h1>
+    </Modal>
+  );
 }
 
 ReactDOM.render(
