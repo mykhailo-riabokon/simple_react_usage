@@ -19,13 +19,11 @@ const tabs = [
 const activeTabId = 2;
 
 
-class App extends React.Component {
-  render() {
-    return (
-      <Tabs tabs={tabs} activeTabId={activeTabId} />
-    );
-  }
-}
+function App() {
+  return (
+    <Tabs tabs={tabs} activeTabId={activeTabId} />
+  );
+};
 
 ReactDOM.render(
   <App />,

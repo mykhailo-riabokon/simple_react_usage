@@ -1,6 +1,12 @@
 function TabBody(props) {
+  
+  let cssClasses = "ui bottom attached tab segment";
+  if (props.isActive === true) {
+    cssClasses += " active";
+  }
+
   return (
-    <div className={props.isActive === true ? "ui bottom attached tab segment active" : "ui bottom attached tab segment"}
+    <div className={cssClasses}
       data-tab={props.id}>{props.content}</div>
   );
 }

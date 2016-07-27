@@ -6,9 +6,12 @@ class Tabs extends React.Component {
     this.state = {
       activeTabId: props.activeTabId
     };
+
+    this.setActiveTab = this.setActiveTab.bind(this);
   }
 
-  setActiveTab(tabId) {
+  setActiveTab(event) {
+    var tabId = +event.currentTarget.getAttribute("data-tab");
     this.setState({ activeTabId: tabId });
   }
 
@@ -22,7 +25,7 @@ class Tabs extends React.Component {
                 id={tab.id}
                 title={tab.title}
                 isActive={tab.id === this.state.activeTabId}
-                setActive={this.setActiveTab.bind(this, tab.id) }/>
+                setActive={this.setActiveTab}/>
             })
           }
         </div>

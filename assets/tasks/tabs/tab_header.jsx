@@ -1,6 +1,12 @@
 function TabHeader(props) {
+
+  let cssClasses = "item";
+  if (props.isActive === true) {
+    cssClasses += " active";
+  }
+
   return (
-    <a className={props.isActive === true ? "item active" : "item"} data-tab={props.id} onClick={props.setActive}>{props.title}</a>
+    <a className={cssClasses} data-tab={props.id} onClick={props.setActive}>{props.title}</a>
   );
 }
 
