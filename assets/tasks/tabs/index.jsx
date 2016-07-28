@@ -1,40 +1,31 @@
 const tabs = [
   {
     title: 'Tab title',
-    content: 'Tab content',
+    content: 'Tab content1',
     id: 'tab-id1'
- },
-   {
+  },
+  {
     title: 'Tab title2',
-    content: 'Tab content',
+    content: 'Tab content2',
     id: 'tab-id2'
- },
-   {
+  },
+  {
     title: 'Tab title3',
-    content: 'Tab content',
+    content: 'Tab content3',
     id: 'tab-id3'
- },
+  },
 ];
 class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      selectedTab: 'tab-id1'
-    };
-
-    this.onSelectChanged = this.onSelectChanged.bind(this);
-  }
-
-  onSelectChanged(value) {
-    this.setState({ selectedTab: value });
   }
 
   render() {
     return (
       <div className="ui container">
         <h1>This is React Semantic UI tabs</h1>
-        <Tabs tabs={tabs} selectedTab={this.state.selectedTab}/>
+        <Tabs tabs={tabs} selectedTab="tab-id2"/>
       </div>
     );
   }
