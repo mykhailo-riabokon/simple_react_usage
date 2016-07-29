@@ -8,7 +8,7 @@ class Tab extends React.Component {
     _renderContext() {
         let classNames = 'ui bottom attached tab segment';
         let activeClass = ((this.props.selectedTab == this.props.tab.id) ? 'active' + classNames : classNames);
-        return (<div className={activeClass} data-tab={this.props.tab.id}>
+        return (<div className={activeClass} data-tab={this.props.key}>
                   {this.props.tab.content}
                 </div>)
     }

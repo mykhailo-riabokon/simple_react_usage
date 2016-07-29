@@ -7,25 +7,24 @@ class Tabs extends React.Component {
             selectedTab: this.props.selectedTab
         };
 
-        this.onTabChanged = this.onTabChanged.bind(this);
+        this.onTabClick = this.onTabClick.bind(this);
 
     }
 
-    onTabChanged(event) {
-        const tab = event.currentTarget;
-        this.setState({ selectedTab: tab.dataset.tab });
+    onTabClick(args) {
+        this.setState({ selectedTab: args.selectedTab });
     }
 
     render() {
         return (
             <div>
                 <div className="ui top attached tabular menu">
-                  <a className="item" data-tab="tab-id1" onClick={this.onTabChanged}>First</a>
-                  <a className="item" data-tab="tab-id2" onClick={this.onTabChanged}>Second</a>
-                  <a className="item" data-tab="tab-id3" onClick={this.onTabChanged}>Third</a>
+                {this.props.tabs.map((tab, index) => {
+                    return <TabHeader key={index} onTabClick={this.onTabClick} title={tab.title} id={tab.id} selectedTab={this.state.selectedTab}/>
+                })}
                 </div>
-                {this.props.tabs.map((tab) => {
-                    return <Tab tab={tab} selectedTab={this.state.selectedTab} key={tab.id}/>
+                {this.props.tabs.map((tab, index) => {
+                    return <Tab tab={tab} selectedTab={this.state.selectedTab} key={index} id={tab.id}/>
                 })}
             </div>
             );
